@@ -1,7 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors'); // 
- 
+
+// Create an express application
 const app = express();
  
 app.use(cors())
@@ -20,6 +21,8 @@ app.use(bodyParser.json());
 app.get('/', (req, res)=>{
     res.send('Hello World');
 });
+
+
 // import employee routes
 const employeeRoutes = require('./src/routes/employee.route');
  
